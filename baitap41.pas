@@ -13,13 +13,12 @@ begin
                 end;
         write('nhap so x: ');readln(x);
         d:=0;
-        if x=a[i] then c:= true;
+        c:=false;
         for i:=1 to n do
                 begin
-                        if x = a[i] then b[d+1]:=i;
-
+                        if x = a[i] then writeln(x,' o vi tri thu ',i);
+                        if x = a[i] then c:=true;
                 end;
-         for i:=1 to d do
-          writeln(x,'o vi tri thu',b[i]);
+                if c = false then writeln('x khong ton tai trong mang!');
            readln;
 end.
